@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+
+.app-header {
+  text-align: center;
+  margin-bottom: $espacamento-grande;
+
+  h1 {
+    color: $cor-primaria;
+    font-size: $fonte-titulo;
+    margin-bottom: $espacamento-pequeno;
+  }
+
+  p {
+    color: $cor-texto;
+    font-size: $fonte-subtitulo;
+  }
+}

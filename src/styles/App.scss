@@ -1,0 +1,49 @@
+@import "variables";
+
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fonte-principal;
+  line-height: 1.6;
+  background-color: $cor-fundo;
+}
+
+// Layout principal
+.app {
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
+  padding: $espacamento-grande;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $espacamento-medio;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $espacamento-pequeno;
+  }
+}
+
+// Estilos globais
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-weight: bold;
+}
+
+// Grid responsivo
+.sessoes-container {
+  display: grid;
+  gap: $espacamento-medio;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: $espacamento-grande;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
