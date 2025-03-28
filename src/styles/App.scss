@@ -1,6 +1,5 @@
 @import "variables";
 
-// Reset básico
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   background-color: $cor-fundo;
 }
 
-// Layout principal
 .app {
   max-width: $breakpoint-desktop;
   margin: 0 auto;
@@ -28,7 +26,6 @@ body {
   }
 }
 
-// Estilos globais
 button {
   cursor: pointer;
   transition: all 0.3s ease;
@@ -36,7 +33,6 @@ button {
   font-weight: bold;
 }
 
-// Grid responsivo
 .sessoes-container {
   display: grid;
   gap: $espacamento-medio;
