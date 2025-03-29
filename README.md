@@ -1,12 +1,58 @@
-# React + Vite
+## Descrição do Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte de um desafio técnico, criando uma interface em React que consome a API pública do Rick and Morty para buscar e exibir personagens individualmente.
 
-Currently, two official plugins are available:
+## Funcionalidades Implementadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Busca de Personagem: Interface para buscar um personagem específico pelo ID
 
-## Expanding the ESLint configuration
+Design Responsivo: Layout adaptável usando Sass para estilização
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Testes Automatizados: Suíte de testes com Jest para garantir a qualidade do código
+
+## Tecnologias Utilizadas
+
+### Frontend:
+
+React com JavaScript
+
+Sass para estilização
+
+Axios para requisições HTTP
+
+### Testes:
+
+Jest
+
+React Testing Library
+
+## Como Executar o Projeto
+
+Clone o repositório:
+
+git clone https://github.com/igustavo11/Desafio-agroger.git
+
+#### Instale as dependências:
+
+npm install
+
+#### Inicie a aplicação:
+
+npm start
+
+#### Para executar os testes:
+
+npm test
+
+Funcionamento da Aplicação
+A interface apresenta um campo de busca onde o usuário pode inserir o ID do personagem desejado
+
+Ao submeter a busca, a aplicação consome o endpoint /character/{id} da API Rick and Morty
+
+### Os dados do personagem são exibidos em um card com:
+
+Imagem
+
+Nome
+
+Espécie
