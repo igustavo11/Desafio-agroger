@@ -41,8 +41,8 @@ const RecipeList = () => {
             <div className="content">
               <h2 className="title-id">ID: {sessao.id}</h2>
               <div className="desc">
-                <h3>{sessao.species}</h3>
-                <p>
+                <h3>Especie: {sessao.species}</h3>
+                <p className="desc-name">
                   <strong>Nome:</strong> {sessao.name}
                 </p>
               </div>

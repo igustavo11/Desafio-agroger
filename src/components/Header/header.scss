@@ -1,17 +1,39 @@
 @use "../../styles/variables" as *;
 
-.app-header {
-  text-align: center;
-  margin-bottom: $espacamento-grande;
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $espacamento-medio;
+  background-color: $cor-primaria;
+  color: $cor-white;
 
-  h1 {
-    color: $cor-primaria;
-    font-size: $fonte-titulo;
-    margin-bottom: $espacamento-pequeno;
+  .search-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+
+    .search-input {
+      width: 100%;
+      padding: 8px 5px;
+      font-size: $fonte-subtitulo;
+      border-radius: $borda-arredondada;
+      border: none;
+      outline: none;
+      background-color: $cor-white;
+      color: $cor-black;
+    }
   }
+}
 
-  p {
-    color: $cor-texto;
-    font-size: $fonte-subtitulo;
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  .photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: $espacamento-pequeno;
   }
 }
