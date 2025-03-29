@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { mockSessions } from "../../mocks/sessions.mock";
 import { fetchCharacter } from "../../services/api";
 import "./recipelist.scss";
+import Button from "../ui/Button/button";
 
 const RecipeList = () => {
   const [sessoes, setSessoes] = useState(mockSessions); //inicializa com os mocks
@@ -14,6 +15,7 @@ const RecipeList = () => {
       const character = await fetchCharacter(); //chama a api pro proximo
 
       const novaSessao = {
+        species: character.species,
         id: character.id,
         name: character.name,
         image: character.image,
@@ -28,23 +30,27 @@ const RecipeList = () => {
   };
 
   return (
-    // retorna o personagem
     <div className="main-content">
-      <button onClick={fetchData} disabled={loading}>
+      <Button onClick={fetchData} disabled={loading} className="main-button">
         {loading ? "Carregando..." : "Novo Personagem"}
-      </button>
+      </Button>
 
       <div className="sessoes-container">
         {sessoes.map((sessao) => (
-          <div key={sessao.id} className="session-item">
-            <h3>{sessao.title}</h3>
-            <p>
-              <strong>ID:</strong> {sessao.id}
-            </p>
-            <p>
-              <strong>Nome:</strong> {sessao.name}
-            </p>
-            <img src={sessao.image} alt={sessao.name} />
+          <div key={sessao.id} className="card">
+            <div className="content">
+              <h2 className="title-id">ID: {sessao.id}</h2>
+              <div className="desc">
+                <h3>{sessao.species}</h3>
+                <p>
+                  <strong>Nome:</strong> {sessao.name}
+                </p>
+              </div>
+              <div className="card-action">
+                <Button className="card-button">Ver detalhes</Button>
+              </div>
+            </div>
+            <img src={sessao.image} alt={sessao.name} className="image" />
           </div>
         ))}
       </div>

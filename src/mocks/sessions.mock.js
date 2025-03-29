@@ -1,14 +1,14 @@
 export const mockSessions = [
   {
-    id: 1,
+    id: 11212,
     name: "Rick",
-    title: "Cientista Louco",
+    species: "Cientista Louco",
     image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
   },
   {
-    id: 2,
+    id: 223234,
     name: "Morty",
-    title: "Neto de Rick",
+    species: "Neto de Rick",
     image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
   },
 ];
