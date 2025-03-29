@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 module.exports = {
   transform: {
-    "^.+\\.[tj]sx?$": "babel-jest", // Isso garante que o Babel será usado para arquivos .jsx e .tsx
+    "^.+\\.[tj]sx?$": "babel-jest",
   },
   extensionsToTreatAsEsm: [".ts", ".tsx"],
   testEnvironment: "jsdom",
