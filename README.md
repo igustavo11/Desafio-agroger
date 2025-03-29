@@ -44,7 +44,8 @@ npm start
 
 npm test
 
-Funcionamento da Aplicação
+### Funcionamento da Aplicação:
+
 A interface apresenta um campo de busca onde o usuário pode inserir o ID do personagem desejado
 
 Ao submeter a busca, a aplicação consome o endpoint /character/{id} da API Rick and Morty
