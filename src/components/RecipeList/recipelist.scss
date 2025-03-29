@@ -1,57 +1,80 @@
 @use "../../styles/variables" as *;
 
-.session-card {
-  background: white;
-  border-radius: $borda-arredondada;
-  box-shadow: $sombra-box;
-  padding: $espacamento-medio;
+.card {
+  max-width: 400px;
+  border-radius: 0.5rem;
+  background-color: $cor-white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
   margin-bottom: $espacamento-pequeno;
+}
 
-  h3 {
-    color: $cor-primaria;
-    margin-bottom: $espacamento-pequeno;
+.content {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 130px);
+}
+
+.image {
+  object-fit: cover;
+  width: 130px;
+  height: 110px;
+  margin: auto 10px auto 0;
+  border-radius: 3px;
+}
+
+.card-action {
+  margin-top: 3px;
+}
+
+.desc {
+  margin-top: 0.5rem;
+  color: $cor-preto;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.sessoes-container {
+  width: 100%;
+  display: grid;
+  gap: $espacamento-medio;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: $espacamento-grande;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .card {
+    flex-direction: row;
+    max-width: 100%;
   }
 
-  p {
-    color: $cor-texto;
-    margin-bottom: $espacamento-medio;
+  .image {
+    width: 90px;
+    height: 90px;
+    margin: auto 10px auto 0;
   }
 
-  &-actions {
-    display: flex;
-    gap: $espacamento-pequeno;
-
-    button {
-      padding: 0.5rem 1rem;
-      border-radius: $borda-arredondada - 4px;
-      flex: 1;
-
-      &.provar-agora {
-        background: $cor-sucesso;
-        color: white;
-      }
-
-      &.finalizada {
-        background: $cor-erro;
-        color: white;
-      }
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      flex-direction: column;
-    }
-  }
-
-  .error-message {
-    color: #e74c3c;
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  button.error {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
+  .content {
+    width: calc(100% - 90px);
   }
 }
