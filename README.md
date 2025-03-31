@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como parte de um desafio técnico, criando uma int
 
 ## Funcionalidades Implementadas
 
-Busca de Personagem: Interface para buscar um personagem específico pelo ID
+Busca de Personagem: Interface para buscar um personagem específico pelo ID(apenas no botão de novo personagem)
 
 Design Responsivo: Layout adaptável usando Sass para estilização
 
@@ -46,7 +46,7 @@ npm test
 
 ### Funcionamento da Aplicação:
 
-A interface apresenta um campo de busca onde o usuário pode inserir o ID do personagem desejado
+A interface apresenta um campo de busca onde seleciona o novo personagem 
 
 Ao submeter a busca, a aplicação consome o endpoint /character/{id} da API Rick and Morty
 
